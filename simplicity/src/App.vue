@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+import axios from 'axios';
+
+const temp = async () => {
+  const api = await axios.get("http://localhost:5002/api/users");
+  console.log(api);
+}
+
+temp();
 </script>
 
 <template>

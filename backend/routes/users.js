@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const pool = require("../db-config/db");
 
 router.get('/', async (req, res) => {

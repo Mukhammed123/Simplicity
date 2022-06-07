@@ -12,7 +12,7 @@ CREATE TABLE services (
     name VARCHAR(255),
     info VARCHAR(255),
     user_id INT,
-    FOREIGN KEY (user_id) REFERENCES users (user_id)
+    FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE
 );
 
 INSERT INTO services (service_id, name, info, user_id) VALUES (1, 'taxi', 'scooter', 1);

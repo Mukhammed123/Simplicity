@@ -4,7 +4,13 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import axios from 'axios';
 
 const temp = async () => {
-  const api = await axios.get("http://localhost:5002/api/users");
+  const api = await axios.post("http://localhost:5002/api/services", 
+    {
+      service_name: "taxi",
+      info: "car",
+      user_id: 1
+    }
+  );
   console.log(api);
 }
 

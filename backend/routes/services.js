@@ -13,6 +13,7 @@ router.post('/', async (req, res) => {
         "INSERT INTO services (name, info, user_id) VALUES ($1, $2, $3) RETURNING *",
         [data.service_name, data.info, data.user_id]
     );
+    console.log(services);
     res.json(services.rows);
 });
 
